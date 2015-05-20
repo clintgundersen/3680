@@ -1,0 +1,251 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                tools:context="edu.uvu.cpg.project_3_clintgundersen.DetailView">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/titleLabel"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:editable="true"
+        android:focusable="false"
+        android:inputType="text"
+        android:textIsSelectable="false"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/authorLabel"
+        android:layout_below="@+id/titleLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@android:color/transparent"
+        android:editable="true"
+        android:textIsSelectable="false"
+        android:focusable="false"
+        android:inputType="text"
+        android:gravity="center"/>
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="220dp"
+        android:id="@+id/coverImage"
+        android:layout_below="@+id/authorLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Sci Fi List Ranking"
+        android:id="@+id/listRankingTitleLabel"
+        android:layout_below="@+id/authorLabel"
+        android:layout_toRightOf="@+id/coverImage"
+        android:layout_toEndOf="@+id/coverImage"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="My Rating"
+        android:id="@+id/userRatingTitleLabel"
+        android:gravity="center"
+        android:layout_below="@+id/listRankingLabel"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/listRankingLabel"
+        android:layout_alignStart="@+id/listRankingLabel"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="35"
+        android:id="@+id/listRankingLabel"
+        android:layout_below="@+id/listRankingTitleLabel"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="center"
+        android:layout_alignLeft="@+id/listRankingTitleLabel"
+        android:layout_alignStart="@+id/listRankingTitleLabel"
+        android:textSize="75dp"
+        android:background="@android:color/transparent"
+        android:editable="true"
+        android:focusable="false"
+        android:inputType="number"
+        android:textIsSelectable="false"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="35"
+        android:id="@+id/userRatingLabel"
+        android:gravity="center"
+        android:layout_below="@+id/userRatingTitleLabel"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/userRatingTitleLabel"
+        android:layout_alignStart="@+id/userRatingTitleLabel"
+        android:background="@android:color/transparent"
+        android:editable="true"
+        android:textIsSelectable="false"
+        android:focusable="false"
+        android:inputType="number"
+        android:textSize="50dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Published:"
+        android:id="@+id/publishedTitleLabel"
+        android:layout_below="@+id/coverImage"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/userRatingLabel"
+        android:layout_toStartOf="@+id/userRatingLabel"
+        android:gravity="right"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="On Overdrive:"
+        android:id="@+id/overdriveTitleLabel"
+        android:layout_toStartOf="@+id/overdriveLabel"
+        android:gravity="right"
+        android:layout_alignTop="@+id/overdriveLabel"
+        android:layout_toLeftOf="@+id/overdriveLabel"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="1955"
+        android:id="@+id/publishedLabel"
+        android:layout_above="@+id/overdriveTitleLabel"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/userRatingLabel"
+        android:layout_alignStart="@+id/userRatingLabel"
+        android:background="@android:color/transparent"
+        android:editable="true"
+        android:textIsSelectable="false"
+        android:focusable="false"
+        android:inputType="number"
+        android:gravity="center"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="No"
+        android:id="@+id/overdriveLabel"
+        android:layout_below="@+id/publishedTitleLabel"
+        android:layout_toRightOf="@+id/publishedTitleLabel"
+        android:layout_toEndOf="@+id/publishedTitleLabel"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@android:color/transparent"
+        android:editable="true"
+        android:textIsSelectable="false"
+        android:focusable="false"
+        android:inputType="text"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Finished it?:"
+        android:id="@+id/readTitleLabel"
+        android:layout_below="@+id/overdriveTitleLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/overdriveTitleLabel"
+        android:layout_alignEnd="@+id/overdriveTitleLabel"
+        android:gravity="right"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="No"
+        android:id="@+id/readLabel"
+        android:layout_below="@+id/overdriveLabel"
+        android:layout_alignLeft="@+id/overdriveLabel"
+        android:layout_alignStart="@+id/overdriveLabel"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@android:color/transparent"
+        android:editable="true"
+        android:textIsSelectable="false"
+        android:focusable="false"
+        android:inputType="text"
+        android:gravity="center"/>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Edit"
+        android:id="@+id/editButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Done"
+        android:id="@+id/saveButton"
+        android:layout_alignBottom="@+id/editButton"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:id="@+id/deleteButton"
+        android:layout_alignBottom="@+id/saveButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:text="description content, description content,description content,description content,description content description content ,description content"
+        android:inputType="textMultiLine"
+        android:background="@android:color/transparent"
+        android:ems="5"
+        android:id="@+id/descriptionLabel"
+        android:layout_below="@+id/readTitleLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:editable="true"
+        android:focusable="false"
+        android:textIsSelectable="false"/>
+
+</RelativeLayout>

@@ -1,0 +1,196 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".selectDice">
+
+    <TextView
+        android:text="Select Your Dice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroup"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Two Sided Die (Coin)"
+            android:id="@+id/twoSidedRadio"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Four Sided Die"
+            android:id="@+id/fourSidedRadio"
+            android:onClick='onRadioButtonClicked'/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Six Sided Die"
+            android:id="@+id/sixSidedRadio"
+            android:onClick='onRadioButtonClicked'/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Eight Sided Die"
+            android:id="@+id/eightSidedRadio"
+            android:onClick='onRadioButtonClicked'/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ten Sided Die"
+            android:id="@+id/tenSidedRadio"
+            android:onClick='onRadioButtonClicked'/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Twelve Sided Die"
+            android:id="@+id/twelveSidedRadio"
+            android:onClick='onRadioButtonClicked'/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Twenty Sided Die"
+            android:id="@+id/twentySidedRadio"
+            android:onClick='onRadioButtonClicked'/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thirty Sided Die"
+            android:id="@+id/thirtySidedRadio"
+            android:onClick='onRadioButtonClicked'/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hundred Sided Die"
+            android:id="@+id/hundredSidedRadio"
+            android:onClick='onRadioButtonClicked'/>
+    </RadioGroup>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Die To The Pile"
+        android:id="@+id/addDieButton"
+        android:layout_alignTop="@+id/radioGroup"
+        android:layout_alignLeft="@+id/rollDiceButton"
+        android:layout_alignStart="@+id/rollDiceButton" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Roll The Dice!"
+        android:id="@+id/rollDiceButton"
+        android:layout_below="@+id/addDieButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Pile"
+        android:id="@+id/resetButton"
+        android:layout_below="@+id/reRollButton"
+        android:layout_alignRight="@+id/reRollButton"
+        android:layout_alignEnd="@+id/reRollButton"
+        android:layout_alignLeft="@+id/reRollButton"
+        android:layout_alignStart="@+id/reRollButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0"
+        android:id="@+id/totalDiceLabel"
+        android:layout_toEndOf="@+id/textView"
+        android:layout_below="@+id/totalMessageLabel"
+        android:layout_alignLeft="@+id/totalMessageLabel"
+        android:layout_alignStart="@+id/totalMessageLabel"
+        android:layout_alignRight="@+id/totalMessageLabel"
+        android:layout_alignEnd="@+id/totalMessageLabel"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Dice In Pile"
+        android:id="@+id/totalMessageLabel"
+        android:layout_below="@+id/resetButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/resetButton"
+        android:layout_alignStart="@+id/resetButton"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=""
+        android:id="@+id/outputLabel"
+        android:layout_below="@+id/radioGroup"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/resetButton"
+        android:layout_alignEnd="@+id/resetButton" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Re Roll Pile"
+        android:id="@+id/reRollButton"
+        android:layout_below="@+id/rollDiceButton"
+        android:layout_alignRight="@+id/rollDiceButton"
+        android:layout_alignEnd="@+id/rollDiceButton"
+        android:layout_alignLeft="@+id/rollDiceButton"
+        android:layout_alignStart="@+id/rollDiceButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Pile Total"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/totalDiceLabel"
+        android:layout_alignLeft="@+id/totalDiceLabel"
+        android:layout_alignStart="@+id/totalDiceLabel"
+        android:layout_alignRight="@+id/totalDiceLabel"
+        android:layout_alignEnd="@+id/totalDiceLabel"
+        android:gravity="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/pileTotalLabel"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id/totalDiceLabel"
+        android:layout_alignRight="@+id/totalDiceLabel"
+        android:layout_alignEnd="@+id/textView2" />
+
+
+</RelativeLayout>

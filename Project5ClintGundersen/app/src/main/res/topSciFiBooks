@@ -1,0 +1,20 @@
+BEGIN TRANSACTION;
+CREATE TABLE SciFiBooks (imagepath TEXT, _id INTEGER PRIMARY KEY, title TEXT, author TEXT, listRank NUMERIC, userRating NUMERIC, published NUMERIC, overdrive TEXT, finshed TEXT, description TEXT);
+INSERT INTO SciFiBooks VALUES('nineteen84',1,'Nineteen Eighty-Four','George Orwell',5,7,1949,'Yes','Yes','English socialism or Ingsoc conrols the thoughts of the population as one man deals with government surveillance and thought police.');
+INSERT INTO SciFiBooks VALUES('ringworld',2,'Ringworld','Lary Niven',13,7,1970,'No','Yes','A group of explorers investigate the Ringworld, a compromise on the Dyson Sphere.');
+INSERT INTO SciFiBooks VALUES('ubik',3,'Ubik','Phillip K Dick',42,10,1969,'Yes','Yes','A team of nti-psychics tries to discover why the world is unraveling around them');
+INSERT INTO SciFiBooks VALUES('diamondage',4,'Diamond Age','Neal Stephenson',51,10,1995,'Yes','Yes','A Nano-punk novel predicting the impending future of 3-D printing.');
+INSERT INTO SciFiBooks VALUES('rama',5,'Rendezvous With Rama','Arthur C. Clarke',14,7,1973,'No','Yes','A team of scientists embark to explore the first alien craft discovered in our solar system.');
+INSERT INTO SciFiBooks VALUES('carbon',6,'Altered Carbon','Richard K. Morgan',87,9,2002,'No','Yes','A private eye sets out to solve the murder of his immortal employer.');
+INSERT INTO SciFiBooks VALUES('canticle',7,'A Canticle for Leibowitz','Walter M. Miller Jr',48,7,1960,'No','Yes','In a future where science and reading are persecuted, a group of onks seek to protect the knowledge of the past.');
+INSERT INTO SciFiBooks VALUES('caves',8,'Caves of Steel','Isaac Asimov',30,8,1954,'No','Yes','A etective and his robot partner set out to solve a murder.');
+INSERT INTO SciFiBooks VALUES('gateway',9,'Gateway','Fredrick Pohl',32,7,1977,'No','Yes','Trying to  make some money, a man volunteers to test alien technology to explore the universe.');
+INSERT INTO SciFiBooks VALUES('lordoflight',10,'Lord of Light','Roger Zelazny',33,0,1967,'No','No','In the far future, refugees from Earth try to survive.');
+INSERT INTO SciFiBooks VALUES('triffids',11,'Day of the Triffids
+','John Wyndham',43,10,1961,'Yes','Yes','A man and a woman try to survive as the end of the world unfolds around them.');
+INSERT INTO SciFiBooks VALUES('stars',12,'The Stars My Destination','Alfred Bester',31,9,1956,'No','Yes','A man embarks on a quest for revenge against the star ship that left him to die.');
+INSERT INTO SciFiBooks VALUES('stranger',13,'Stranger In A Strange Land
+','Robert A Heinlan',6,0,1961,'No','No','The story of Valentine Michael Smith, the man from Mars who taught humankind grokking and water-sharing. And love.');
+CREATE TABLE android_metadata (locale TEXT);
+INSERT INTO android_metadata VALUES('en_US');
+COMMIT;
